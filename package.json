@@ -1,5 +1,5 @@
 {
-  "name": "figma-tokens",
+  "name": "figma-tokens-test",
   "version": "0.0.9",
   "description": "A tool for generate Figma design tokens as variables",
   "main": "./bin/figma-tokens.js",
@@ -19,7 +19,9 @@
     "figma-tokens": "npm run figma-tokens:api && npm run figma-tokens:build",
     "figma-tokens:api": "node bin/figma-tokens-api.js",
     "figma-tokens:build": "node bin/figma-tokens-build.js",
-    "release": "node scripts/release.js"
+    "release": "node scripts/release.js",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "keywords": [
     "cli",
@@ -29,15 +31,26 @@
     "figma",
     "tokens"
   ],
-  "author": "Juan Carlos Ruiz <klaufel@gmail.com>",
+  "author": "Lord Voivodul <crozzagerhc@hotmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/klaufel/figma-tokens#readme",
+  "homepage": "https://github.com/josedjesus-morales/figma-tokens-test#readme",
   "dependencies": {
     "commander": "9.3.0",
     "node-fetch": "3.2.6",
     "ora": "6.1.2"
   },
   "devDependencies": {
-    "standard": "17.0.0"
+    "@babel/preset-env": "^7.22.5",
+    "@storybook/addon-essentials": "^7.0.24",
+    "@storybook/addon-interactions": "^7.0.24",
+    "@storybook/addon-links": "^7.0.24",
+    "@storybook/blocks": "^7.0.24",
+    "@storybook/html": "^7.0.24",
+    "@storybook/html-webpack5": "^7.0.24",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "standard": "17.0.0",
+    "storybook": "^7.0.24"
   }
 }

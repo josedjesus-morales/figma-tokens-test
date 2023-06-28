@@ -65,4 +65,4 @@ https://github.com/klaufel/pattern-library-skeleton/tree/master/src/figma-tokens
 
 ## License
 
-[MIT License](LICENSE.md) © [Juan Carlos Ruiz](https://github.com/klaufel)
+[MIT License](LICENSE.md) ©

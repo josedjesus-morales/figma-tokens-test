@@ -1,7 +1,6 @@
 node_modules/
 public/
 dist/
-tokens/
 npm-debug.log
 .idea/
 .vscode/
