@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Do not edit directly
+  Generated on Tue, 11 Jul 2023 02:05:08 GMT
+-->
+<resources>
+  <color name="color_alert_warning">#ffa90d</color>
+  <color name="color_alert_error">#e5363a</color>
+  <color name="color_alert_success">#45f742</color>
+  <color name="color_neutral00">#ffffff</color>
+  <color name="color_neutral05">#f2f2f2</color>
+  <color name="color_neutral20">#cccccc</color>
+  <color name="color_neutral40">#999999</color>
+  <color name="color_neutral80">#333333</color>
+  <color name="color_primary_dark">#255ef1</color>
+  <color name="color_primary_main">#f1935f</color>
+  <color name="color_primary_light">#75fa83</color>
+  
+</resources>

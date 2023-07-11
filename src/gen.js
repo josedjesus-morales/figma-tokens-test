@@ -1,8 +1,5 @@
 import fs from 'fs'
-import ora from 'ora'
 import fetch from 'node-fetch'
-import path from 'path'
-
 import {
   getColors,
   getTypography,
@@ -12,28 +9,36 @@ import {
   getRadius
 } from './types/index.js'
 
-const DESIGN_TOKENS_PATH = path.join(process.cwd(), '.', 'tokens')
-
-const genFile = tokens => {
-  if (!fs.existsSync(DESIGN_TOKENS_PATH)) {
-    fs.mkdirSync(DESIGN_TOKENS_PATH)
-  }
-
-  fs.writeFile(
-    `${DESIGN_TOKENS_PATH}/tokens.json`,
-    JSON.stringify(tokens, null, 2),
-    err => {
-      if (err) throw new Error(`\x1b[31m\n\n❌ ${err}\n\n`)
-      console.log('\x1b[32m✔︎\x1b[0m Figma design tokens created!\n')
-    }
-  )
+const emojis = {
+  color: '🎨',
+  typography: '🖋 ',
+  spacing: '📐',
+  shadow: '🌚',
+  breakpoint: '🍪',
+  radius: '🌀'
 }
 
-export default function genTokens(apikey, id) {
-  const spinner = ora('🚀 Connecting with Figma...\n').start()
+const genFile = (name, tokens, outDir) =>
+  fs.writeFile(
+    `${outDir}/${name}.json`,
+    JSON.stringify(tokens, null, 2),
+    err => {
+      if (err) {
+        throw new Error(`\x1b[31m\n\n❌ ${err}\n\n`)
+      }
+      // eslint-disable-next-line no-console
+      console.log(
+        `\x1b[32m ${
+          emojis[name]
+        } ${name.toUpperCase()} tokens created!\x1b[0m\n`
+      )
+    }
+  )
 
-  const FETCH_PATH = 'https://api.figma.com/v1/files'
-  const FETCH_URL = `${FETCH_PATH}/${id}`
+const genTokens = (apikey, id, outDir) => {
+  // eslint-disable-next-line no-console
+  console.log('\x1b[40m 👟 🚀  Connecting from figma... \x1b[0m\n')
+  const FETCH_URL = `https://api.figma.com/v1/files/${id}`
   const FETCH_DATA = {
     method: 'GET',
     headers: {
@@ -44,30 +49,34 @@ export default function genTokens(apikey, id) {
   try {
     fetch(FETCH_URL, FETCH_DATA)
       .then(response => {
-        spinner.text = '🚀 Generating Figma design tokens...\n'
+        // eslint-disable-next-line no-console
+        console.log(
+          ' Connection with Figma is successful...\n\n----------------\n'
+        )
         return response.json()
       })
       .then(styles => {
         if (styles.status !== 403 && styles.status !== 404) {
           const figmaTree = styles.document.children[0].children
 
-          genFile({
-            ...getColors('Colors', figmaTree),
-            ...getSpacing('Spacings', figmaTree),
-            ...getTypography('Typography', figmaTree),
-            ...getShadows('Shadows', figmaTree),
-            ...getRadius('Radius', figmaTree),
-            ...getBreakpoints('Breakpoints', figmaTree)
-          })
-
-          spinner.stop()
+          genFile('color', getColors('Colors', figmaTree), outDir)
+          genFile('spacing', getSpacing('Spacings', figmaTree), outDir)
+          genFile('typography', getTypography('Typography', figmaTree), outDir)
+          genFile('shadow', getShadows('Shadows', figmaTree), outDir)
+          genFile('radius', getRadius('Radius', figmaTree), outDir)
+          genFile(
+            'breakpoint',
+            getBreakpoints('Breakpoints', figmaTree),
+            outDir
+          )
         }
       })
       .catch(err => {
-        spinner.stop()
-        throw new Error(`\x1b[31m\n\n❌ ${err}\n`)
+        throw new Error(`\x1b[31m\n\n❌ ${err}\n\n`)
       })
   } catch (err) {
     throw new Error(`\x1b[31m\n\n❌ ${err}\n\n`)
   }
 }
+
+export default genTokens

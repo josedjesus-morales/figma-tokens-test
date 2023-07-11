@@ -6,7 +6,7 @@ import { camelCase, kebabCase } from '../src/utils.js'
 
 const NAMING_CONVENTION = { kebabcase: kebabCase, camelcase: camelCase }
 
-const DESIGN_TOKENS_FILE = path.join(process.cwd(), '.', 'tokens/tokens.json')
+const DESIGN_TOKENS_FILE = path.join(process.cwd(), '.', 'tokens/json/*.json')
 
 const FORMATS = {
   css: {

@@ -5,7 +5,7 @@ export default function getBreakpoints (layerName, stylesArtboard) {
   const decorator = element => {
     const { name, absoluteBoundingBox } = element
     const tokens = {
-      [camelCase(name)]: `${absoluteBoundingBox.width}px`
+      [camelCase(name)]: {value: `${absoluteBoundingBox.width}px`}
     }
     Object.assign(palette.breakpoint, tokens)
   }

@@ -8,7 +8,7 @@ export default function getSpacing (layerName, stylesArtboard) {
       absoluteBoundingBox: { width }
     } = element
     const tokens = {
-      [camelCase(name)]: `${width}px`
+      [camelCase(name)]: {value: `${width}px`}
     }
     Object.assign(palette.spacing, tokens)
   }

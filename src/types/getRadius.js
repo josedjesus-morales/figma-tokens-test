@@ -6,7 +6,7 @@ export default function getRadius (layerName, stylesArtboard) {
     const { name } = element
     const { cornerRadius } = element.children[0]
     const tokens = {
-      [camelCase(name)]: `${cornerRadius}px`
+      [camelCase(name)]: {value: `${cornerRadius}px`}
     }
     Object.assign(palette.radius, tokens)
   }
