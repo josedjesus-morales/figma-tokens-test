@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 11 Jul 2023 02:46:44 GMT
+ * Generated on Tue, 11 Jul 2023 04:43:39 GMT
  */
 
 export const BreakpointXl = "1460px";
@@ -17,7 +17,7 @@ export const ColorNeutral20 = "#cccccc";
 export const ColorNeutral40 = "#999999";
 export const ColorNeutral80 = "#333333";
 export const ColorPrimaryDark = "#255ef1";
-export const ColorPrimaryMain = "#f1935f";
+export const ColorPrimaryMain = "#d90746";
 export const ColorPrimaryLight = "#75fa83";
 export const RadiusSm = "8px";
 export const RadiusMd = "16px";

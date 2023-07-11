@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Tue, 11 Jul 2023 02:46:44 GMT
+// Generated on Tue, 11 Jul 2023 04:43:39 GMT
 
 
 import UIKit
@@ -20,5 +20,5 @@ public enum TokensColor {
     public static let neutral80 = UIColor(red: 0.200, green: 0.200, blue: 0.200, alpha: 1)
     public static let primaryDark = UIColor(red: 0.145, green: 0.369, blue: 0.945, alpha: 1)
     public static let primaryLight = UIColor(red: 0.459, green: 0.980, blue: 0.514, alpha: 1)
-    public static let primaryMain = UIColor(red: 0.945, green: 0.576, blue: 0.373, alpha: 1)
+    public static let primaryMain = UIColor(red: 0.851, green: 0.027, blue: 0.275, alpha: 1)
 }

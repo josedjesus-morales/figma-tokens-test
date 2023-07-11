@@ -4,7 +4,7 @@
 //
 
 // Do not edit directly
-// Generated on Tue, 11 Jul 2023 02:46:44 GMT
+// Generated on Tue, 11 Jul 2023 04:43:39 GMT
 
 
 #import "TokensColor.h"
@@ -30,7 +30,7 @@
 [UIColor colorWithRed:0.600f green:0.600f blue:0.600f alpha:1.000f],
 [UIColor colorWithRed:0.200f green:0.200f blue:0.200f alpha:1.000f],
 [UIColor colorWithRed:0.145f green:0.369f blue:0.945f alpha:1.000f],
-[UIColor colorWithRed:0.945f green:0.576f blue:0.373f alpha:1.000f],
+[UIColor colorWithRed:0.851f green:0.027f blue:0.275f alpha:1.000f],
 [UIColor colorWithRed:0.459f green:0.980f blue:0.514f alpha:1.000f]
     ];
   });

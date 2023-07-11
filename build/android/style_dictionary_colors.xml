@@ -2,7 +2,7 @@
 
 <!--
   Do not edit directly
-  Generated on Tue, 11 Jul 2023 02:46:44 GMT
+  Generated on Tue, 11 Jul 2023 04:43:39 GMT
 -->
 <resources>
   <color name="color_alert_warning">#ffa90d</color>
@@ -14,7 +14,7 @@
   <color name="color_neutral40">#999999</color>
   <color name="color_neutral80">#333333</color>
   <color name="color_primary_dark">#255ef1</color>
-  <color name="color_primary_main">#f1935f</color>
+  <color name="color_primary_main">#d90746</color>
   <color name="color_primary_light">#75fa83</color>
   
 </resources>

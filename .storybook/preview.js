@@ -1,5 +1,5 @@
 /** @type { import('@storybook/html').Preview } */
-import '../tokens/tokens.css';
+import '../build/css/variables.css';
 
 const preview = {
   parameters: {
