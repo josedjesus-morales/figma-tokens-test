@@ -5,7 +5,7 @@
 ## 🚀 Installation
 
 ```sh
-npm install figma-tokens --save-dev
+npm install
 ```
 
 ## 🧐 How to use?
@@ -58,10 +58,6 @@ Create a `config.figma.json` file and added your credentials.
   "FIGMA_ID": "Your Figma file id"
 }
 ```
-
-Working on an npm package, you can look at this repository meanwhile :)
-
-https://github.com/klaufel/pattern-library-skeleton/tree/master/src/figma-tokens
 
 ## License
 
