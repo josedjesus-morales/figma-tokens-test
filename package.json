@@ -1,6 +1,6 @@
 {
   "name": "figma-tokens-test",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A tool for generate Figma design tokens as variables",
   "main": "./bin/figma-tokens.js",
   "repository": {
